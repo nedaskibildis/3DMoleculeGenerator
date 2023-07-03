@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <title>Molecule Generator</title>
+</head>
+    <body>
+        <script>0</script>
+        <h1>Neds Molecule Generator</h1>
+        <div class="molecule-svg" id="molDisplay">
+        </div>
+        <div class="menu">
+            <button class="menu-button" id="addElement">Add Element</button>
+            <button class="menu-button" id="removeElement">Remove Element</button>
+            <button class="menu-button" id="uploadSDF">Upload SDF</button>
+            <button class="menu-button" id="selectMolecule">Select Molecule</button>
+        </div>
+        <!-- Add Element Modal -->
+        <dialog class="add-element-form" id="addElementForm">
+            <p style="text-align: center;">Enter Element Information:</p>
+            <form action="">
+                <input type="number" name="" id="elementNumber" placeholder="Element Number">
+                <input type="text" name="" id="elementCode" placeholder="Element Code">
+                <input type="text" name="" id="elementName" placeholder="Element name">
+                <label for="color1">Color 1</label>
+                <input type="color" name="color1" id="color1" placeholder="Colour 1">
+                <label for="color2">Color 2</label>
+                <input type="color" name="color2" id="color2" placeholder="Colour 2">
+                <label for="color3">Color 3</label>
+                <input type="color" name="color3" id="color3" placeholder="Colour 3">
+                <input type="text" name="" id="elementRadius" placeholder="Element Radius">
+                <button type="submit" class="submit-button" id="addElementSubmit">Submit</button>
+            </form>
+        </dialog>
+        <!-- Remove Element Modal -->
+        <dialog class="remove-element-form" id="removeElementForm">
+            <p style="text-align: center;">Select Elements To Remove:</p>
+            <form action="" id="removeElemForm">
+                <button type="submit">Submit</button>
+            </form>
+        </dialog>
+        <!-- Upload SDF Modal -->
+        <dialog class="upload-sdf-form" id="uploadSDFDialog">
+            <form action="" id="uploadSDFForm">
+                <p>Select File To Upload</p>
+                <label for="sdf-file">Upload File</label>
+                <input type="file" id="sdf-file" name="sdf-file">
+                <label for="moleculeName"> Molecule Name</label>
+                <input type="text" id="moleculeName" name="moleculeName">
+                <button type="submit">Submit</button>
+            </form>
+        </dialog>
+        <!-- Select Molecule Modal -->
+        <dialog class="select-molecule-modal" id="selectMoleculeForm">
+            <form action="">
+                <p>Select Molecule You Wish To Display</p>
+                <select name="" id="selectMoleculeMenu">
+                </select>
+                <button type="submit">Submit</button>
+            </form>
+        </dialog>
+        <script src="script.js" charset="utf-8" type="text/javascript"></script>
+    </body>
+</html>
